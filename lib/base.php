@@ -1431,10 +1431,10 @@ final class Base extends Prefab implements ArrayAccess {
 			if ($this->hive['VERB']!='OPTIONS' &&
 				isset($route[$this->hive['VERB']])) {
 				$parts=parse_url($req);
-				if ($this->hive['VERB']=='GET' &&
-					preg_match('/.+\/$/',$parts['path']))
-					$this->reroute(substr($parts['path'],0,-1).
-						(isset($parts['query'])?('?'.$parts['query']):''));
+//				if ($this->hive['VERB']=='GET' &&
+//					preg_match('/.+\/$/',$parts['path']))
+//					$this->reroute(substr($parts['path'],0,-1).
+//						(isset($parts['query'])?('?'.$parts['query']):''));
 				list($handler,$ttl,$kbps,$alias)=$route[$this->hive['VERB']];
 				if (is_bool(strpos($pattern,'/*')))
 					foreach (array_keys($args) as $key)
