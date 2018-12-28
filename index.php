@@ -17,12 +17,16 @@ $f3->route('GET /',
 				array(
 					'hash',
 					'json',
-					'session'
+					'session',
+					'mbstring'
 				),
 			'Cache'=>
 				array(
 					'apc',
+					'apcu',
 					'memcache',
+					'memcached',
+					'redis',
 					'wincache',
 					'xcache'
 				),
