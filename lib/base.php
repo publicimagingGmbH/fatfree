@@ -1574,10 +1574,11 @@ final class Base extends Prefab implements ArrayAccess {
 			if (!$route)
 				continue;
 			if (isset($route[$this->hive['VERB']]) && !$preflight) {
-				if ($this->hive['VERB']=='GET' &&
+				/*if ($this->hive['VERB']=='GET' &&
 					preg_match('/.+\/$/',$this->hive['PATH']))
 					$this->reroute(substr($this->hive['PATH'],0,-1).
 						($this->hive['QUERY']?('?'.$this->hive['QUERY']):''));
+				*/
 				list($handler,$ttl,$kbps,$alias)=$route[$this->hive['VERB']];
 				// Capture values of route pattern tokens
 				$this->hive['PARAMS']=$args;
