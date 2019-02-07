@@ -138,7 +138,7 @@ class Web extends Prefab {
 					'filename="'.($name!==NULL?$name:basename($file)).'"');
 			header('Accept-Ranges: bytes');
 			header('Content-Length: '.$size);
-			header('X-Powered-By: '.Base::instance()->PACKAGE);
+			//header('X-Powered-By: '.Base::instance()->PACKAGE);
 		}
 		if (!$kbps && $flush) {
 			while (ob_get_level())
